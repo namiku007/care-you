@@ -1,0 +1,121 @@
+.lt-container {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 40px;
+  transition: background 0.8s ease;
+  font-family: "Poppins", sans-serif;
+}
+
+.lt-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.25s;
+}
+
+.lt-back:hover {
+  background: #ffe1f3;
+  transform: scale(1.05);
+}
+
+.lt-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+
+.lt-subtitle {
+  font-size: 20px;
+  color: white;
+  opacity: 0.9;
+}
+
+.lt-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.lt-color-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.lt-color-btn:hover {
+  transform: scale(1.15);
+}
+
+/* Volume Control */
+.lt-volume-box {
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.lt-volume-slider {
+  width: 250px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.lt-volume-box {
+  margin-top: 40px;
+  color: white;
+  font-size: 18px;
+}
+
+.lt-volume-slider {
+  width: 250px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.lt-bubble-btn {
+  width: 250px;              /* ⬅ ใหญ่ขึ้น */
+  height: 250px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+
+  margin: 28px auto 10px;
+  
+  /* เงาแบบนุ่มฟู */
+  box-shadow:
+    0 0 35px rgba(255, 255, 255, 0.9),
+    0 0 70px rgba(255, 255, 255, 0.6),
+    inset 0 0 25px rgba(255, 255, 255, 0.5);
+
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+  
+  animation: bubbleFloat 3s ease-in-out infinite;
+}
+
+/* hover น่ารักมาก */
+.lt-bubble-btn:hover {
+  transform: scale(1.15);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ตอนคลิกให้ดูยุบตัว */
+.lt-bubble-btn:active {
+  transform: scale(0.8);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* ฟองลอยขึ้นลง */
+@keyframes bubbleFloat {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-10px) scale(1.05); }
+  100% { transform: translateY(0) scale(1); }
+}
+

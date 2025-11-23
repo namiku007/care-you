@@ -1,0 +1,110 @@
+.mp-container {
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 0;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.mp-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.2s;
+}
+
+.mp-back:hover {
+  background: #ffe1f3;
+  transform: scale(1.05);
+}
+
+.mp-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 12px rgba(255,255,255,0.7);
+}
+
+.mp-subtitle {
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* กระดาน */
+.mp-board {
+  width: 480px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  gap: 2px;
+}
+
+.mp-cell {
+  width: 28px;
+  height: 28px;
+  background: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.mp-cell:hover {
+  transform: scale(1.1);
+}
+
+/* พาเลตสี */
+.mp-palette {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.mp-color {
+  width: 35px;
+  height: 35px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.2s;
+}
+
+.mp-color.active {
+  border: 2px solid white;
+  box-shadow: 0 0 10px white;
+}
+
+.mp-color:hover {
+  transform: scale(1.1);
+}
+
+/* ปุ่มลบ */
+.mp-clear {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.mp-clear:hover {
+  background: #ff4b4b;
+  transform: scale(1.07);
+}
+
+.mp-color.white {
+  border: 1px solid #ccc;
+}

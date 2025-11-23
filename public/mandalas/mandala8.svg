@@ -1,0 +1,39 @@
+<svg width="600" height="600" viewBox="0 0 600 600"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="white"/>
+
+  <!-- วงนอก -->
+  <circle cx="300" cy="300" r="260" fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- ลายคล้ายเขาวงกต -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <rect x="110" y="110" width="380" height="380" fill="white"/>
+    <rect x="150" y="150" width="300" height="300" fill="white"/>
+    <rect x="190" y="190" width="220" height="220" fill="white"/>
+    <rect x="230" y="230" width="140" height="140" fill="white"/>
+  </g>
+
+  <!-- วงโค้งซ้อน -->
+  <g stroke="#444" stroke-width="2" fill="none">
+    <circle cx="300" cy="300" r="200"/>
+    <circle cx="300" cy="300" r="170"/>
+    <circle cx="300" cy="300" r="140"/>
+  </g>
+
+  <!-- ลายพัด 8 ช่อง -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <path d="M300 160 A140 140 0 0 1 380 190 L340 230 A90 90 0 0 0 300 210 Z"/>
+    <path d="M380 190 A140 140 0 0 1 430 260 L380 260 A90 90 0 0 0 340 230 Z"/>
+    <path d="M430 260 A140 140 0 0 1 430 340 L380 340 A90 90 0 0 0 380 260 Z"/>
+    <path d="M430 340 A140 140 0 0 1 380 410 L340 370 A90 90 0 0 0 380 340 Z"/>
+    <path d="M380 410 A140 140 0 0 1 300 440 L300 390 A90 90 0 0 0 340 370 Z"/>
+    <path d="M300 440 A140 140 0 0 1 220 410 L260 370 A90 90 0 0 0 300 390 Z"/>
+    <path d="M220 410 A140 140 0 0 1 170 340 L220 340 A90 90 0 0 0 260 370 Z"/>
+    <path d="M170 340 A140 140 0 0 1 170 260 L220 260 A90 90 0 0 0 220 340 Z"/>
+    <path d="M170 260 A140 140 0 0 1 220 190 L260 230 A90 90 0 0 0 220 260 Z"/>
+    <path d="M220 190 A140 140 0 0 1 300 160 L300 210 A90 90 0 0 0 260 230 Z"/>
+  </g>
+
+  <!-- วงกลาง -->
+  <circle cx="300" cy="300" r="45" fill="white" stroke="#444" stroke-width="2"/>
+</svg>

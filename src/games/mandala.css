@@ -1,0 +1,139 @@
+.mandala-container { 
+  text-align: center;
+  min-height: 100vh;
+  padding: 40px 0;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* กลับ */
+.mandala-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 20px;
+  color: #555;
+  text-decoration: none;
+  transition: 0.2s;
+}
+.mandala-back:hover { 
+  background: #ffe1f3;
+  transform: scale(1.05); 
+}
+
+.mandala-title {
+  font-size: 42px;
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 3px 12px rgba(255,255,255,0.7);
+}
+
+.mandala-subtitle {
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* เลือกแมนดาลา */
+.mandala-select {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 17px;
+}
+.mandala-select select {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #ffffffcc;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* Auto Fill */
+.auto-fill-toggle {
+  margin-bottom: 15px;
+  color: white;
+  font-size: 16px;
+}
+
+/* ลาย */
+.mandala-box {
+  width: 400px;
+  margin: 0 auto;
+}
+.mandala-svg {
+  width: 100%;
+  cursor: pointer;
+}
+
+/* เอฟเฟกต์เรืองแสง */
+.glow {
+  filter: drop-shadow(0 0 10px white);
+  transition: 0.5s;
+}
+
+/* แถบสี */
+.mandala-colors {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.mandala-color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.25s;
+}
+.mandala-color:hover {
+  transform: scale(1.12);
+}
+.mandala-color.active {
+  border: 3px solid white;
+  box-shadow: 0 0 10px white;
+  transform: scale(1.12);
+}
+
+/* -------------------------
+   ปุ่มใหม่แบบ Soft UI สวย ๆ
+------------------------- */
+.button-row {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.mandala-btn {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+
+  background: #ffffffee;
+  color: #444;
+
+  box-shadow: 
+    0 3px 7px rgba(255,255,255,0.9),
+    0 4px 10px rgba(0,0,0,0.08);
+
+  transition: 0.25s ease;
+}
+
+.mandala-btn:hover {
+  transform: scale(1.08);
+  background: #ffe7f4;
+  box-shadow: 
+    0 6px 14px rgba(255,255,255,1),
+    0 6px 14px rgba(0,0,0,0.12);
+}
+
+.mandala-btn:active {
+  transform: scale(0.96);
+}

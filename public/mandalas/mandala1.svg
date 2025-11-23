@@ -1,0 +1,61 @@
+<svg width="600" height="600" viewBox="0 0 600 600"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="white"/>
+
+  <!-- วงหลัก -->
+  <circle cx="300" cy="300" r="260" fill="white" stroke="#444" stroke-width="2"/>
+  <circle cx="300" cy="300" r="210" fill="white" stroke="#444" stroke-width="2"/>
+  <circle cx="300" cy="300" r="150" fill="white" stroke="#444" stroke-width="2"/>
+  <circle cx="300" cy="300" r="90"  fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- ดอกกลาง -->
+  <circle cx="300" cy="300" r="40" fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- กลีบยาว 8 ทิศ -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <path d="M300 40 L320 120 L280 120 Z"/>
+    <path d="M300 560 L320 480 L280 480 Z"/>
+    <path d="M40 300 L120 320 L120 280 Z"/>
+    <path d="M560 300 L480 320 L480 280 Z"/>
+
+    <path d="M95 95 L160 135 L135 160 Z"/>
+    <path d="M505 95 L465 160 L440 135 Z"/>
+    <path d="M95 505 L135 440 L160 465 Z"/>
+    <path d="M505 505 L440 465 L465 440 Z"/>
+  </g>
+
+  <!-- วงเล็ก 16 วง -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <!-- วงรัศมี 210 -->
+    <circle cx="300" cy="90" r="20"/>
+    <circle cx="420" cy="120" r="20"/>
+    <circle cx="510" cy="210" r="20"/>
+    <circle cx="540" cy="300" r="20"/>
+    <circle cx="510" cy="390" r="20"/>
+    <circle cx="420" cy="480" r="20"/>
+    <circle cx="300" cy="510" r="20"/>
+    <circle cx="180" cy="480" r="20"/>
+    <circle cx="90" cy="390" r="20"/>
+    <circle cx="60" cy="300" r="20"/>
+    <circle cx="90" cy="210" r="20"/>
+    <circle cx="180" cy="120" r="20"/>
+
+    <!-- วงรัศมี 150 -->
+    <circle cx="300" cy="150" r="14"/>
+    <circle cx="375" cy="180" r="14"/>
+    <circle cx="420" cy="245" r="14"/>
+    <circle cx="420" cy="355" r="14"/>
+    <circle cx="375" cy="420" r="14"/>
+    <circle cx="300" cy="450" r="14"/>
+    <circle cx="225" cy="420" r="14"/>
+    <circle cx="180" cy="355" r="14"/>
+    <circle cx="180" cy="245" r="14"/>
+    <circle cx="225" cy="180" r="14"/>
+  </g>
+
+  <!-- ลายกงล้อด้านใน -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <polygon points="300,260 330,270 340,300 330,330 300,340 270,330 260,300 270,270"/>
+    <polygon points="300,220 360,240 380,300 360,360 300,380 240,360 220,300 240,240"/>
+  </g>
+</svg>

@@ -1,0 +1,75 @@
+.zen-container {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 40px;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  font-family: "Poppins", sans-serif;
+}
+
+.zen-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.2s;
+}
+
+.zen-back:hover {
+  background: #ffe1f3;
+  transform: scale(1.05);
+}
+
+.zen-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+
+.zen-subtitle {
+  font-size: 20px;
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* บล็อกปัจจุบัน */
+.current-block {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+  animation: appear 0.4s ease;
+}
+
+@keyframes appear {
+  from { transform: scale(0.2); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+/* กระดาน */
+.zen-board {
+  width: 330px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+
+.zen-cell {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.zen-cell:hover {
+  transform: scale(1.08);
+}

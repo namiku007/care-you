@@ -1,0 +1,86 @@
+.puzzle-container {
+  height: 100vh;
+  text-align: center;
+  padding-top: 40px;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: white;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background: #ffd9ee;
+}
+
+.puzzle-title {
+  font-size: 48px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 12px rgba(255,255,255,0.7);
+}
+
+.puzzle-grid {
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tile {
+  background: rgba(255,255,255,0.55);
+  backdrop-filter: blur(5px);
+  border-radius: 14px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.empty {
+  background: transparent;
+  box-shadow: none;
+  cursor: default;
+}
+
+.reset-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 16px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: #ffe2f5;
+  transform: scale(1.05);
+}
+
+.win-text {
+  font-size: 24px;
+  margin-top: 10px;
+  color: white;
+  text-shadow: 0 2px 8px rgba(255,255,255,0.8);
+}

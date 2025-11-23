@@ -1,0 +1,65 @@
+.piano-container {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.piano-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.2s;
+}
+
+.piano-back:hover {
+  background: #ffe1f3;
+  transform: scale(1.05);
+}
+
+.piano-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 12px rgba(255,255,255,0.7);
+}
+
+.piano-subtitle {
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 28px;
+}
+
+.piano-keys {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.piano-key {
+  width: 70px;
+  height: 220px;
+  border-radius: 14px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  font-size: 22px;
+  padding-bottom: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  transition: 0.2s;
+  user-select: none;
+}
+
+.piano-key:active {
+  transform: scale(0.92);
+  box-shadow: 0 0 0 rgba(0,0,0,0.1);
+}

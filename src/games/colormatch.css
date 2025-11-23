@@ -1,0 +1,134 @@
+.cm-container {
+  text-align: center;
+  min-height: 100vh;
+  padding-top: 40px;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Title */
+.cm-title {
+  font-size: 42px;
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 5px 15px rgba(255,255,255,0.7);
+}
+
+.cm-score {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 22px;
+}
+
+/* Back Button */
+.cm-back-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 20px;
+  text-decoration: none;
+  color: #555;
+  transition: 0.25s;
+}
+
+.cm-back-btn:hover {
+  background: #ffe1f2;
+  transform: scale(1.05);
+}
+
+/* Grid */
+.cm-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 90px);
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+/* Tile */
+.cm-tile {
+  width: 90px;
+  height: 90px;
+  position: relative;
+  perspective: 700px;
+  cursor: pointer;
+}
+
+/* Inner flip wrapper */
+.cm-inner {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;   /* ไม่ให้เด้ง */
+}
+
+.cm-tile.flipped .cm-inner {
+  transform: rotateY(180deg);        /* แค่หมุน ไม่มี jump */
+}
+
+/* หน้าปิด */
+.cm-front,
+.cm-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ด้านหน้า (ปิดไพ่) */
+.cm-front {
+  background: white;
+}
+
+/* ด้านหลัง (สี) */
+.cm-back {
+  transform: rotateY(180deg);
+}
+/* พื้นที่ชนะ */
+.cm-win-box {
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 0.4s ease;
+}
+
+.cm-win-text {
+  font-size: 20px;
+  color: #ff7fbf;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* ปุ่ม Restart */
+.cm-restart-btn {
+  padding: 12px 26px;
+  background: linear-gradient(135deg, #ff9ecb, #ffb3e6);
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(255, 120, 180, 0.4);
+  transition: 0.2s;
+}
+
+.cm-restart-btn:hover {
+  transform: scale(1.07);
+  background: linear-gradient(135deg, #ff8dc2, #ffaadd);
+}
+
+.cm-restart-btn:active {
+  transform: scale(0.96);
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+

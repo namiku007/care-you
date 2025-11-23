@@ -1,0 +1,19 @@
+/* พื้นหลังของเว็บทั้งหมด */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAFAFA; /* ขาวละมุนพาสเทล */
+  font-family: "Segoe UI", sans-serif;
+  color: #333;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;   /* ⬅️ บังคับไม่ให้มีขอบเกิน */
+}
+/* ทำให้คอนเทนต์ไม่ชิดบนเกินไป */
+.page-container {
+  padding: 30px;
+}

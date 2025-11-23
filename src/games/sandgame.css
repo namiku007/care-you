@@ -1,0 +1,83 @@
+.sand-container {
+  text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
+  padding: 40px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.sand-back {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 18px;
+  text-decoration: none;
+  color: #444;
+  transition: 0.2s;
+}
+
+.sand-back:hover {
+  background: #ffe1f3;
+  transform: scale(1.05);
+}
+
+.sand-title {
+  font-size: 42px;
+  color: white;
+  font-weight: 800;
+  text-shadow: 0 3px 10px rgba(255,255,255,0.7);
+}
+
+.sand-subtitle {
+  color: white;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+/* Canvas */
+.sand-canvas {
+  background: #fffdf7;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border: 2px solid #ffe5ec;
+  cursor: crosshair;
+}
+
+/* สีทราย */
+.sand-colors {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.sand-color {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.2s;
+}
+
+.sand-color:hover {
+  transform: scale(1.1);
+}
+
+/* ปุ่มล้าง */
+.sand-clear {
+  margin-top: 25px;
+  padding: 10px 26px;
+  background: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sand-clear:hover {
+  background: #ffe3f2;
+  transform: scale(1.05);
+}

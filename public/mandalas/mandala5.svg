@@ -1,0 +1,45 @@
+<svg width="600" height="600" viewBox="0 0 600 600"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="white"/>
+
+  <!-- กรอบดาว -->
+  <circle cx="300" cy="300" r="250" fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- ดาว 8 แฉก -->
+  <polygon
+    points="300,70 340,180 450,160 370,240 400,350 300,290 200,350 230,240 150,160 260,180"
+    fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- วงซ้อน -->
+  <circle cx="300" cy="300" r="180" fill="white" stroke="#444" stroke-width="2"/>
+  <circle cx="300" cy="300" r="130" fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- กลีบโค้ง 8 กลีบ -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <path d="M300 140 Q330 180 300 220 Q270 180 300 140 Z"/>
+    <path d="M300 380 Q330 340 300 300 Q270 340 300 380 Z"/>
+
+    <path d="M160 300 Q200 270 240 300 Q200 330 160 300 Z"/>
+    <path d="M440 300 Q400 270 360 300 Q400 330 440 300 Z"/>
+
+    <path d="M210 190 Q250 210 260 250 Q220 230 210 190 Z"/>
+    <path d="M390 190 Q350 210 340 250 Q380 230 390 190 Z"/>
+
+    <path d="M210 410 Q250 390 260 350 Q220 370 210 410 Z"/>
+    <path d="M390 410 Q350 390 340 350 Q380 370 390 410 Z"/>
+  </g>
+
+  <!-- วงเมล็ดด้านใน -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <circle cx="300" cy="210" r="12"/>
+    <circle cx="360" cy="240" r="12"/>
+    <circle cx="390" cy="300" r="12"/>
+    <circle cx="360" cy="360" r="12"/>
+    <circle cx="300" cy="390" r="12"/>
+    <circle cx="240" cy="360" r="12"/>
+    <circle cx="210" cy="300" r="12"/>
+    <circle cx="240" cy="240" r="12"/>
+  </g>
+
+  <circle cx="300" cy="300" r="35" fill="white" stroke="#444" stroke-width="2"/>
+</svg>

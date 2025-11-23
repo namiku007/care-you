@@ -1,0 +1,53 @@
+/* Navbar Glass + Soft Pastel (Smaller Version) */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 32px; /* ลดจาก 14px 60px → เล็กลง */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(to right, #f8caddaa, #d5e7ffaa);
+  backdrop-filter: blur(8px);
+
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(-15px);
+  pointer-events: none;
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.navbar-show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Logo เล็กลง */
+.navbar-logo {
+  font-size: 22px;   /* จาก 30px → 22px */
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.5px;
+}
+
+/* เมนูเล็กลง */
+.navbar-links {
+  display: flex;
+  gap: 24px; /* ลดจาก 42px → 24px */
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 16px;  /* จาก 20px → 16px */
+  font-weight: 600;
+  color: #ffffff;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.navbar-links a:hover {
+  color: #ccfcfd;
+  transform: translateY(-2px);
+}

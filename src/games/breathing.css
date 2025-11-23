@@ -1,0 +1,50 @@
+.breathing-container {
+  text-align: center;
+  padding-top: 80px;
+  background: linear-gradient(to bottom, #ffc9dd, #dff1ff);
+  min-height: 100vh;
+  position: relative;
+}
+
+.breathing-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: white;
+  text-shadow: 0 3px 10px rgba(255,255,255,0.6);
+}
+
+.breathing-phase {
+  font-size: 26px;
+  margin-top: 10px;
+  color: white;
+  opacity: 0.9;
+}
+
+.breathing-circle {
+  margin: 40px auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 30px rgba(255,255,255,0.4);
+  transition: all 3s ease;
+}
+
+/* ปุ่มกลับ */
+.back-btn {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  padding: 8px 18px;
+  background: white;
+  border-radius: 18px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: 0.2s;
+}
+
+.back-btn:hover {
+  background: #ffe6f1;
+  transform: scale(1.07);
+}

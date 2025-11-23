@@ -1,0 +1,49 @@
+<svg width="600" height="600" viewBox="0 0 600 600"
+     xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="600" fill="white"/>
+
+  <!-- วงใหญ่ -->
+  <circle cx="300" cy="300" r="260" fill="white" stroke="#444" stroke-width="2"/>
+
+  <!-- โครงตารางกลม -->
+  <g stroke="#444" stroke-width="2" fill="none">
+    <circle cx="300" cy="300" r="220"/>
+    <circle cx="300" cy="300" r="180"/>
+    <circle cx="300" cy="300" r="140"/>
+    <circle cx="300" cy="300" r="100"/>
+
+    <!-- เส้นแบ่ง 12 ส่วน -->
+    <line x1="300" y1="40"  x2="300" y2="560"/>
+    <line x1="40"  y1="300" x2="560" y2="300"/>
+    <line x1="110" y1="110" x2="490" y2="490"/>
+    <line x1="490" y1="110" x2="110" y2="490"/>
+    <line x1="180" y1="60"  x2="420" y2="540"/>
+    <line x1="60"  y1="180" x2="540" y2="420"/>
+  </g>
+
+  <!-- ช่องสี่เหลี่ยมโค้งด้านใน (ให้ระบายสี) -->
+  <g fill="white" stroke="#444" stroke-width="2">
+    <rect x="260" y="120" width="80" height="40" rx="15"/>
+    <rect x="260" y="440" width="80" height="40" rx="15"/>
+    <rect x="120" y="260" width="40" height="80" rx="15"/>
+    <rect x="440" y="260" width="40" height="80" rx="15"/>
+
+    <rect x="190" y="150" width="60" height="40" rx="15"/>
+    <rect x="350" y="150" width="60" height="40" rx="15"/>
+    <rect x="190" y="410" width="60" height="40" rx="15"/>
+    <rect x="350" y="410" width="60" height="40" rx="15"/>
+  </g>
+
+  <!-- กลีบดอกซ้อน -->
+  <g stroke="#444" stroke-width="2" fill="white">
+    <path d="M300 210 Q330 240 300 270 Q270 240 300 210 Z"/>
+    <path d="M300 330 Q330 360 300 390 Q270 360 300 330 Z"/>
+    <path d="M210 300 Q240 270 270 300 Q240 330 210 300 Z"/>
+    <path d="M330 300 Q360 270 390 300 Q360 330 330 300 Z"/>
+
+    <path d="M260 240 Q300 250 340 240 Q320 280 300 300 Q280 280 260 240 Z"/>
+    <path d="M260 360 Q300 350 340 360 Q320 320 300 300 Q280 320 260 360 Z"/>
+  </g>
+
+  <circle cx="300" cy="300" r="35" fill="white" stroke="#444" stroke-width="2"/>
+</svg>
