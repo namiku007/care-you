@@ -20,7 +20,6 @@ export default function SandGame() {
     animateSand();
   }, []);
 
-  // อนิเมชันให้ทรายตกลง
   function animateSand() {
     const ctx = ctxRef.current;
     const imgData = ctx.getImageData(0, 0, 500, 600);
@@ -30,11 +29,9 @@ export default function SandGame() {
       for (let x = 0; x < 500; x++) {
         const index = (y * 500 + x) * 4;
 
-        // ถ้า pixel เป็นทราย
         if (data[index + 3] !== 0) {
           const below = ((y + 1) * 500 + x) * 4;
 
-          // ถ้าด้านล่างว่าง → ตกลงได้
           if (data[below + 3] === 0) {
             data[below] = data[index];
             data[below + 1] = data[index + 1];
@@ -51,24 +48,53 @@ export default function SandGame() {
     requestAnimationFrame(animateSand);
   }
 
-  // วาดทรายเมื่อเมาส์ลาก
-  function drawSand(e) {
-    if (!drawing) return;
-    const rect = canvasRef.current.getBoundingClientRect();
+  // 🎯 ฟังก์ชันวาดทราย (รองรับทั้ง mouse + touch)
+  function draw(x, y) {
     const ctx = ctxRef.current;
-
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-
     ctx.fillStyle = sandColor;
     ctx.beginPath();
     ctx.arc(x, y, 6, 0, Math.PI * 2);
     ctx.fill();
   }
 
+  // 🎯 Mouse Events
+  function handleMouseDown() {
+    setDrawing(true);
+  }
+
+  function handleMouseUp() {
+    setDrawing(false);
+  }
+
+  function handleMouseMove(e) {
+    if (!drawing) return;
+    const rect = canvasRef.current.getBoundingClientRect();
+    draw(e.clientX - rect.left, e.clientY - rect.top);
+  }
+
+  // 🎯 Touch Events (iPad / iPhone / Android)
+  function handleTouchStart(e) {
+    e.preventDefault();
+    setDrawing(true);
+  }
+
+  function handleTouchEnd() {
+    setDrawing(false);
+  }
+
+  function handleTouchMove(e) {
+    e.preventDefault();
+    if (!drawing) return;
+
+    const rect = canvasRef.current.getBoundingClientRect();
+    const touch = e.touches[0];
+
+    draw(touch.clientX - rect.left, touch.clientY - rect.top);
+  }
+
   return (
     <div className="sand-container">
-      
+
       <Link to="/games" className="sand-back">← กลับ</Link>
 
       <h2 className="sand-title">Sand Game 🏜️</h2>
@@ -78,10 +104,17 @@ export default function SandGame() {
       <canvas
         ref={canvasRef}
         className="sand-canvas"
-        onMouseDown={() => setDrawing(true)}
-        onMouseUp={() => setDrawing(false)}
-        onMouseMove={drawSand}
-        onMouseLeave={() => setDrawing(false)}
+
+        // Mouse Events
+        onMouseDown={handleMouseDown}
+        onMouseUp={handleMouseUp}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseUp}
+
+        // Touch Events สำหรับ iPad / มือถือ
+        onTouchStart={handleTouchStart}
+        onTouchEnd={handleTouchEnd}
+        onTouchMove={handleTouchMove}
       ></canvas>
 
       {/* สีทราย */}
@@ -96,8 +129,10 @@ export default function SandGame() {
         ))}
       </div>
 
-      {/* ปุ่มล้างหน้าจอ */}
-      <button className="sand-clear" onClick={() => ctxRef.current.clearRect(0, 0, 500, 600)}>
+      <button
+        className="sand-clear"
+        onClick={() => ctxRef.current.clearRect(0, 0, 500, 600)}
+      >
         ล้างหน้าจอ
       </button>
     </div>
