@@ -1,11 +1,15 @@
+/* Container หลัก */
 .sand-container {
   text-align: center;
   min-height: 100vh;
   background: linear-gradient(to bottom, #f8cadd, #d5e7ff);
-  padding: 40px 0;
+  padding: 40px 12px;
   font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow-x: hidden;
 }
 
+/* ปุ่มย้อนกลับ */
 .sand-back {
   position: absolute;
   top: 20px;
@@ -16,6 +20,7 @@
   text-decoration: none;
   color: #444;
   transition: 0.2s;
+  z-index: 20;
 }
 
 .sand-back:hover {
@@ -23,39 +28,53 @@
   transform: scale(1.05);
 }
 
+/* หัวข้อ */
 .sand-title {
   font-size: 42px;
   color: white;
   font-weight: 800;
+  margin-top: 40px;
   text-shadow: 0 3px 10px rgba(255,255,255,0.7);
 }
 
 .sand-subtitle {
   color: white;
-  opacity: 0.9;
+  opacity: 0.95;
   margin-bottom: 20px;
+  font-size: 18px;
 }
 
-/* Canvas */
+/* Canvas ทราย */
 .sand-canvas {
   background: #fffdf7;
   border-radius: 12px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
   border: 2px solid #ffe5ec;
   cursor: crosshair;
+
+  /* สำคัญมาก: ปิดการ scroll บนมือถือเวลาแตะ */
+  touch-action: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+
+  width: 100%;
+  max-width: 500px;
+  height: auto;
 }
 
-/* สีทราย */
+/* ตัวเลือกสี */
 .sand-colors {
   display: flex;
   justify-content: center;
-  gap: 12px;
+  gap: 14px;
   margin-top: 25px;
+  flex-wrap: wrap;
 }
 
 .sand-color {
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   cursor: pointer;
   border: 2px solid white;
@@ -63,21 +82,62 @@
 }
 
 .sand-color:hover {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
-/* ปุ่มล้าง */
+/* ปุ่มเคลียร์ */
 .sand-clear {
   margin-top: 25px;
-  padding: 10px 26px;
+  padding: 12px 32px;
   background: white;
   border: none;
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
   transition: 0.3s;
 }
 
 .sand-clear:hover {
   background: #ffe3f2;
   transform: scale(1.05);
+}
+
+/* 📱 รองรับมือถือ */
+@media (max-width: 600px) {
+  .sand-title {
+    font-size: 32px;
+    margin-top: 60px;
+  }
+
+  .sand-subtitle {
+    font-size: 16px;
+  }
+
+  .sand-color {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sand-clear {
+    padding: 10px 24px;
+    font-size: 14px;
+  }
+}
+
+/* 📱 iPad แนวนอน & แนวตั้ง */
+@media (max-width: 1024px) {
+  .sand-container {
+    padding-top: 70px;
+  }
+
+  .sand-back {
+    top: 15px;
+    left: 15px;
+    padding: 8px 16px;
+  }
+
+  .sand-title {
+    margin-top: 30px;
+  }
 }

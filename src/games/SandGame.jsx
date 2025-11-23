@@ -17,6 +17,11 @@ export default function SandGame() {
     canvas.height = 600;
     ctxRef.current = canvas.getContext("2d");
 
+    // ปิดการ scroll ของหน้าจอเฉพาะบน canvas (สำคัญ!)
+    canvas.addEventListener("touchmove", (e) => e.preventDefault(), {
+      passive: false,
+    });
+
     animateSand();
   }, []);
 
@@ -48,7 +53,7 @@ export default function SandGame() {
     requestAnimationFrame(animateSand);
   }
 
-  // 🎯 ฟังก์ชันวาดทราย (รองรับทั้ง mouse + touch)
+  // วาดจุดทราย
   function draw(x, y) {
     const ctx = ctxRef.current;
     ctx.fillStyle = sandColor;
@@ -57,7 +62,7 @@ export default function SandGame() {
     ctx.fill();
   }
 
-  // 🎯 Mouse Events
+  // Mouse Events
   function handleMouseDown() {
     setDrawing(true);
   }
@@ -72,7 +77,7 @@ export default function SandGame() {
     draw(e.clientX - rect.left, e.clientY - rect.top);
   }
 
-  // 🎯 Touch Events (iPad / iPhone / Android)
+  // Touch Events
   function handleTouchStart(e) {
     e.preventDefault();
     setDrawing(true);
@@ -100,7 +105,6 @@ export default function SandGame() {
       <h2 className="sand-title">Sand Game 🏜️</h2>
       <p className="sand-subtitle">วาดทรายนุ่ม ๆ ให้ไหลลงอย่างสบายใจ</p>
 
-      {/* Canvas */}
       <canvas
         ref={canvasRef}
         className="sand-canvas"
@@ -111,13 +115,13 @@ export default function SandGame() {
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseUp}
 
-        // Touch Events สำหรับ iPad / มือถือ
+        // Touch Events
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
       ></canvas>
 
-      {/* สีทราย */}
+      {/* ตัวเลือกสี */}
       <div className="sand-colors">
         {colors.map((c) => (
           <div
